@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dudley Sorensen – About Me / Resume</title>
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Dudley Sorensen</h1>
+      <p class="contacts">
+        <a href="mailto:sorensen.dudley@gmail.com" title="Email Dudley">sorensen.dudley@gmail.com</a>
+        · <a href="tel:+15033051322" title="Call Dudley">+1 (503) 305‑1322</a>
+        · <a href="https://www.linkedin.com/in/dudley-sorensen-10550b37b/" title="LinkedIn profile" target="_blank" rel="noopener">LinkedIn</a>
+        · <a href="https://github.com/dudleysorensen" title="GitHub profile">GitHub</a>
+      </p>
+    </div>
+    <figure class="profile">
+      <!-- Image required by rubric; you can replace profile.jpg with your own file name -->
+      <img src="profile.jpg" alt="Portrait of Dudley Sorensen" />
+      <figcaption>Profile</figcaption>
+    </figure>
+  </header>
+
+  <main>
+    <section aria-labelledby="about">
+      <h2 id="about">About Me</h2>
+      <p>I am a student at the University of Oregon who is still exploring what path to take. I’m trying out different subjects and interests to figure out what feels meaningful to me. I’m currently taking a coding class and find it interesting, though I’m not sure if tech is my long‑term path. I also enjoy writing and have been creating poetry for a while. Beyond academics, I love nature and fitness, and I’ve considered becoming a personal trainer or going into sports physical therapy someday. I’m open to new experiences and curious to see where they lead me.</p>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <p><strong>University of Oregon</strong> — B.S. (in progress)</p>
+      <h3>Relevant Coursework</h3>
+      <ul>
+        <li>Astronomy 122</li><li>Astronomy 123</li><li>Poetry Writing</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <h3>Academic / Creative</h3>
+      <ul>
+        <li>Research & observation</li><li>Basic astronomy concepts</li><li>Writing & creative expression</li><li>Document organization</li>
+      </ul>
+      <h3>Personal / Soft Skills</h3>
+      <ul>
+        <li>Curiosity & willingness to explore</li><li>Communication</li><li>Adaptability</li><li>Problem solving</li><li>Fitness knowledge & self‑discipline</li><li>Nature appreciation & mindfulness</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="interests">
+      <h2 id="interests">Interests</h2>
+      <ul>
+        <li>Nature & the outdoors</li>
+        <li>Fitness & well‑being</li>
+        <li>Poetry & creative writing</li>
+        <li>Exploring careers like personal training or sports PT</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="class-projects">
+      <h2 id="class-projects">Course Projects</h2>
+
+      <div class="project">
+        <h3>Project 2 – Turtle Graphics (Function Calls)</h3>
+        <p>Night scene … Source: <a href="project2.py" target="_blank" rel="noopener">project2.py</a> · <a href="project2.py" download>download</a> · <a href="project2.html">details</a></p>
+      </div>
+
+      <div class="project">
+        <h3>Project 3 – Refactored Turtle Scene</h3>
+        <p>Scene refactored … Source: <a href="project3.py" target="_blank" rel="noopener">project3.py</a> · <a href="project3.py" download>download</a> · <a href="project3.html">details</a></p>
+      </div>
+
+      <div class="project">
+        <h3>Project 4 – Text Processing & Word Frequencies</h3>
+        <p>Requests + spaCy … Source: <a href="project4.py" target="_blank" rel="noopener">project4.py</a> · <a href="project4.py" download>download</a> · <a href="project4.html">details</a></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="work">
+      <h2 id="work">Selected Work</h2>
+      <ol>
+        <li>
+          <strong>Op‑Ed: Student Ticket Access at UO</strong> — PDF (writing sample).
+          <a href="OP-Ed Final.pdf" title="Open OP-Ed PDF">Read</a>
+        </li>
+        <li>
+          <strong>Poetic Playlist</strong> — PDF and Spotify playlist.
+          <a href="Poetic Playlist.pdf" title="Open Poetic Playlist PDF">Read</a>
+          · <a href="https://open.spotify.com/playlist/2HKVtczP2459XufIoYCVJ4?si=b4dfbb7c37444cc8" title="Open Spotify playlist" target="_blank" rel="noopener">Listen</a>
+        </li>
+      </ol>
+  </section>
+  </main>
+
+  <footer>
+    <p class="highlight">&copy; <span id="year"></span> Dudley Sorensen. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

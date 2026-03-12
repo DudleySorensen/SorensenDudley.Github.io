@@ -1,0 +1,108 @@
+/* Dudley Sorensen */
+/* File: styles.css (renamed from starter per instructions)
+   Demo usage notes:
+   - Background overlay technique uses body::before (per assignment requirement).
+   - Removed gradient/opacity causing the "white film".
+   - Added GPU/compositing tweaks to prevent thin horizontal lines on some devices.
+   - Switched 100% dimensions to 100vw/100vh to avoid sub-pixel seams.
+   - Cohesive color scheme inspired by course demo palette. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #f8fafc;
+  --card: #bbb6ec;
+  --ink: #1f2937;
+  --muted: #000000;
+  --accent: #2563eb;
+  --ring: rgba(37, 99, 235, 0.25);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px;
+  position: relative;
+}
+
+/* Clean full-screen background image (no white film) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;               /* prevents sub-pixel rounding lines */
+  height: 100vh;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* anti-tearing / anti-seam tweaks */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  z-index: -1;
+  opacity: 1;                  /* full strength */
+}
+
+header { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
+header h1 { font-size: clamp(1.8rem, 2.2vw + 1rem, 2.6rem); letter-spacing: 0.3px; }
+.contacts { margin-top: 0.35rem; }
+
+hr { border: 0; height: 1px; background: #e5e7eb; margin: 0.75rem 0 1rem; }
+
+.profile { justify-self: end; text-align: center; }
+.profile img {
+  width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.profile figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+
+main { display: grid; gap: 18px; margin-top: 18px; }
+section { background: var(--card); padding: 16px 18px; border-radius: 10px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+
+h2 { font-size: 1.25rem; margin-bottom: 6px; }
+
+h3 { font-size: 1.05rem; color: var(--muted); margin-top: 8px; }
+
+ul, ol { margin-left: 1.25rem; margin-top: 0.25rem; }
+li { margin: 0.15rem 0; }
+
+.note { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
+
+footer { text-align: center; color: var(--muted); margin-top: 16px; }
+
+/* highlight box for the rights message */
+:root {
+  --highlight-bg: #f3e8ff;   /* light lavender/pink */
+  --highlight-color: #1f2937;/* dark ink for contrast */
+}
+
+.highlight {
+  display: block;            /* make the whole line a box */
+  width: 100%;
+  padding: 6px 0;
+  background: var(--highlight-bg);
+  color: var(--highlight-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 520px) {
+  header { grid-template-columns: 1fr; }
+  .profile { justify-self: start; }
+}
+
+
+/*
+AI Assistance Note:
+Some CSS/HTML structure, debugging help, or organization was supported by Microsoft Copilot. 
+All final content, decisions, and customizations were my own.
+*/
